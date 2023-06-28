@@ -29,11 +29,12 @@ public class Task2 {
         }
         System.out.println(" = " + result);
     }
+
     /**
-     * @apiNote Дана последовательность целых чисел, оканчивающаяся нулем
      * @param numb1 ввод первого числа
      * @param numb2 ввод последующих чисел
      * @return Сумма положительных чисел, после которых следует отрицательное число
+     * @apiNote Дана последовательность целых чисел, оканчивающаяся нулем
      */
     private static boolean isNumberPositive(int a, int b) {
         return a > 0 && b < 0;

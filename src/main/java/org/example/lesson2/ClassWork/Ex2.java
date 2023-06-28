@@ -10,13 +10,13 @@ public class Ex2 {
         int n = sc.nextInt();
         System.out.println("Введите последовательность целых чисел: ");
         System.out.println("Результат: " + sumNumbers(n, sc));
-        }
+    }
 
     /**
-     * @apiNote Дана последовательность из N целых чисел
      * @param number количество чисел для ввода
-     * @param in сканер
+     * @param in     сканер
      * @return сумма чисел, оканчивающихся на 5, перед которыми идет четное число
+     * @apiNote Дана последовательность из N целых чисел
      */
     private static int sumNumbers(int number, Scanner in) {
         int numb1 = in.nextInt();

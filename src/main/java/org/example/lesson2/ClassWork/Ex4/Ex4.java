@@ -2,7 +2,7 @@ package org.example.lesson2.ClassWork.Ex4;
 
 public class Ex4 {
     public static void main(String[] args) {
-        Vector vector = new Vector(1, 2 , 3);
+        Vector vector = new Vector(1, 2, 3);
 //        vector.x = 0;
 //        vector.y = 1;
 //        vector.z = 2;

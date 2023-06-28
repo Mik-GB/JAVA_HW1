@@ -17,22 +17,21 @@ public class Task2 {
             int num2 = sc.nextInt();
             if (ascendNumber(num1, num2)) {
 //                System.out.println("Последовательность не является возрастающей!");
-                negativCount +=1;
+                negativCount += 1;
 //                break;
             }
             num1 = num2;
-            }
-        if (negativCount == 0){
+        }
+        if (negativCount == 0) {
             System.out.println("Последовательность является возрастающей!");
-        }
-        else System.out.println("Последовательность не является возрастающей!");
-        }
+        } else System.out.println("Последовательность не является возрастающей!");
+    }
 
     /**
-     * @apiNote Дана последовательность целых чисел, оканчивающаяся нулем
      * @param numb1 ввод первого числа
      * @param numb2 ввод последующих чисел
      * @return Сумма положительных чисел, после которых следует отрицательное число
+     * @apiNote Дана последовательность целых чисел, оканчивающаяся нулем
      */
     private static boolean ascendNumber(int a, int b) {
         return a > b;

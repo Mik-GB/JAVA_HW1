@@ -8,13 +8,13 @@ public class Ex3 {
     }
 
     /**
-     * @apiNote  Дан массив целых чисел
      * @param array входной массив
      * @return симметричен или нет в виде строки
+     * @apiNote Дан массив целых чисел
      */
     private static String palindrom(int[] array) {
         for (int i = 0; i < array.length / 2; i++) {
-            if (array[i] != array[array.length - i - 1]){
+            if (array[i] != array[array.length - i - 1]) {
                 return "Не симметричный !";
             }
         }

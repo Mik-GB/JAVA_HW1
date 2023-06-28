@@ -1,4 +1,4 @@
-package org.example.lesson3.ClassWork;
+package org.example.lesson3.ClassWork.Ex1;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

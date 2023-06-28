@@ -3,7 +3,7 @@ package org.example.lesson2.ClassWork;
 import java.util.Scanner;
 
 public class Ex3 {
-//    3) Дан массив целых чисел. Найти количество пар соседних элементов, где первый элемент вдвое больше второго.
+    //    3) Дан массив целых чисел. Найти количество пар соседних элементов, где первый элемент вдвое больше второго.
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 //    System.out.println("Введите необходимое количество чисел для ввода: ");
@@ -17,7 +17,7 @@ public class Ex3 {
     private static int countElem(int[] arr) {
         int countNum = 0;
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i - 1] == 2 * arr[i]){
+            if (arr[i - 1] == 2 * arr[i]) {
                 countNum += 1;
             }
         }

@@ -2,8 +2,6 @@ package org.example.lesson2.HomeWork;
 
 import java.util.Scanner;
 
-import static java.lang.Math.sqrt;
-
 public class Task1 {
     public static void main(String[] args) {
         /*

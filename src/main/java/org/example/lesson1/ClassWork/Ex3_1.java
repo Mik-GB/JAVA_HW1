@@ -5,18 +5,18 @@ public class Ex3_1 {
 //        Дан массив nums.
 //        Мы определяем текущую сумму массива как  runningSum[i] = sum(nums[0]…nums[i]).
 //        Вернуть текущую сумму nums.
-        int[] arr = {1,2,3,4};
+        int[] arr = {1, 2, 3, 4};
         int[] res = runningSum(arr);
 
         for (int n : res) {
-            System.out.print(n +", ");
+            System.out.print(n + ", ");
         }
     }
 
     /**
-     * @apiNote Дан массив nums. Мы определяем текущую сумму массива как  runningSum[i] = sum(nums[0]…nums[i]).
      * @param nums
      * @return итоговый массив сумм
+     * @apiNote Дан массив nums. Мы определяем текущую сумму массива как  runningSum[i] = sum(nums[0]…nums[i]).
      */
 
     public static int[] runningSum(int[] nums) {
