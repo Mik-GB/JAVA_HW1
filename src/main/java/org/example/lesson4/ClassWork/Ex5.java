@@ -25,23 +25,38 @@ public class Ex5 {
         System.out.println("simplefyPath() = " + simplifyPath("/../"));
         System.out.println("simplefyPath() = " + simplifyPath("/home//foo/"));
     }
-    public static String simplifyPath (String path){
+    public static String simplifyPath (String path) {
+//        Stack<String> stack = new Stack();
+//        StringJoiner res = new StringJoiner("/");
+//        String[] subPath = path.split("/");
+//        for (String s : subPath) {
+//            if ("..".equals(s)) {
+//                if (!stack.isEmpty()) { // если не пустой
+//                    stack.pop();
+//                }
+//            } else if (!".".equals(s) && !s.isEmpty()) {
+//                stack.push(s);
+//            }
+//        }
+//        if (stack.isEmpty()) return "/";
+//        while (!stack.isEmpty()) {
+//            res.add(stack.pop());
         Stack<String> stack = new Stack();
-        StringJoiner res = new StringJoiner("/");
+        StringBuilder res = new StringBuilder();
         String[] subPath = path.split("/");
-        for (String s: subPath) {
-            if ("..".equals(s)){
-                if (!stack.isEmpty()){
+        for (String s : subPath) {
+            if ("..".equals(s)) {
+                if (!stack.isEmpty()) { // если не пустой
                     stack.pop();
                 }
-            } else if (!".".equals(s) && !s.isEmpty()){
+            } else if (!".".equals(s) && !s.isEmpty()) {
                 stack.push(s);
             }
-            if (stack.isEmpty()) return "/";
-            while (!stack.isEmpty()){
-                res.add(stack.pop());
-            }
         }
-        return "/" + res;
+        if (stack.isEmpty()) return "/";
+        while (!stack.isEmpty()) {
+            res.insert(0, stack.pop()).insert(0, "/");
+        }
+        return res.toString();
+        }
     }
-}

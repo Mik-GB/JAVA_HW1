@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Ex1 {
     public static void main(String[] args) {
-//        Учитывая headодносвязный список, переверните список и верните перевернутый список .
+//        Учитывая head односвязный список, переверните список и верните перевернутый список .
         LinkedList<Integer> integerLinkedList = new LinkedList<>();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
