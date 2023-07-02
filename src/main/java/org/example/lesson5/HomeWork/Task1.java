@@ -1,2 +1,4 @@
-package org.example.lesson5.HomeWork;public class Task1 {
+package org.example.lesson5.HomeWork;
+
+public class Task1 {
 }
