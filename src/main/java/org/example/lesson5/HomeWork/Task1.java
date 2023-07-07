@@ -21,14 +21,14 @@ public class Task1 {
         System.out.print("Введите искомое слово: ");
         String word = sc.nextLine();
         String wordLow = word.toLowerCase();
-        for (int i = 0; i < text.length; i++) {
-            if (text[i] == wordLow){
-                mapCh.putIfAbsent(str.charAt(i), 0);
-                mapCh.put(str.charAt(i), mapCh.get(str.charAt(i)) + 1);
-            }
-        }
-        for (Map.Entry<String, Integer> entity : mapCh.entrySet()) {
-            System.out.println(entity.getKey() + " встретился в тексте: " + entity.getValue() + " раз");
-        }
+//        for (int i = 0; i < text.length; i++) {
+//            if (text[i] == wordLow){
+//                mapCh.putIfAbsent(str.charAt(i), 0);
+//                mapCh.put(str.charAt(i), mapCh.get(str.charAt(i)) + 1);
+//            }
+//        }
+//        for (Map.Entry<String, Integer> entity : mapCh.entrySet()) {
+//            System.out.println(entity.getKey() + " встретился в тексте: " + entity.getValue() + " раз");
+//        }
     }
 }
