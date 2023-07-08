@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Os {
+public class OperativeSystem {
     public void sortOperative(List<Notebook> ctlgCopy) {
         Collections.sort(ctlgCopy, new Comparator<Notebook>() {
             @Override

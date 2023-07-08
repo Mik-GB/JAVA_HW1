@@ -1,6 +1,6 @@
 package org.example.lesson6.HomeWork;
 
-public interface NoteBook {
+public interface Notebook {
     public String manufacturer = "Lenovo" ;
     public Integer ram = 4;
     public Integer volumeVD = 256;

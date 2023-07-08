@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        NoteBook notebook = new NoteBook();
-        NoteBook notebook1 = new NoteBook("Asus", 16, 1024, "Windows", "red");
-        NoteBook notebook2 = new NoteBook("Lenovo", 8, 512, "Linux", "white");
-        NoteBook notebook3 = new NoteBook("Apple", 16, 1024, "Mac OS", "red");
-        NoteBook notebook4 = new NoteBook("DEXP", 8, 2048, "Windows", "black");
-        List<NoteBook> catalog = new ArrayList<>();
+        Notebook notebook = new Notebook();
+        Notebook notebook1 = new Notebook("Asus", 16, 1024, "Windows", "red");
+        Notebook notebook2 = new Notebook("Lenovo", 8, 512, "Linux", "white");
+        Notebook notebook3 = new Notebook("Apple", 16, 1024, "Mac OS", "red");
+        Notebook notebook4 = new Notebook("DEXP", 8, 2048, "Windows", "black");
+        List<Notebook> catalog = new ArrayList<>();
         catalog.add(notebook);
         catalog.add(notebook1);
         catalog.add(notebook2);
@@ -21,9 +21,9 @@ public class Main {
         menu(scanner, catalog);
     }
 
-    private static void menu(Scanner sc, List<NoteBook> ctlg) {
+    private static void menu(Scanner sc, List<Notebook> ctlg) {
         boolean flag = true;
-        List<NoteBook> catalogCopy = new ArrayList<>(ctlg);
+        List<Notebook> catalogCopy = new ArrayList<>(ctlg);
         while (flag) {
             System.out.println();
             System.out.println(new Text().selectionMenu);
@@ -31,21 +31,21 @@ public class Main {
             int selection = sc.nextInt();
             switch (selection) {
                 case 1:
-                    for (NoteBook s : ctlg) {
+                    for (Notebook s : ctlg) {
                         System.out.println(s);
                     }
                     break;
                 case 2:
                     sortNotebook(catalogCopy, sc);
-                    for (NoteBook s : catalogCopy) {
+                    for (Notebook s : catalogCopy) {
                         System.out.println("Notebook " + s);
                     }
                     break;
                 case 3:
-                    List<NoteBook> filter = filterNotebook(ctlg, sc);
+                    List<Notebook> filter = filterNotebook(ctlg, sc);
                     if(!filter.isEmpty()){
                         System.out.println(new Text().foundItems);
-                        for (NoteBook s : filter) {
+                        for (Notebook s : filter) {
                             System.out.println(s);
                         }
                     }else {
@@ -60,8 +60,8 @@ public class Main {
 
     }
 
-    private static List<NoteBook> filterNotebook(List<NoteBook> ctlg, Scanner sc) {
-        List<NoteBook> myList = new ArrayList<>();
+    private static List<Notebook> filterNotebook(List<Notebook> ctlg, Scanner sc) {
+        List<Notebook> myList = new ArrayList<>();
         System.out.println(new Text().menuEnter);
         System.out.println(new Text().searchPart);
         int partSearch = sc.nextInt();
@@ -115,6 +115,26 @@ public class Main {
         return myList;
     }
 
+    private static void sortNotebook(List<Notebook> catalogCopy, Scanner cs) {
+
+        System.out.println(new Text().menu);
+        int numberCase = cs.nextInt();
+        switch (numberCase) {
+            case 1:
+                new Manufacturer().sortManufacturer(catalogCopy);
+                break;
+            case 2:
+                new Ram().sortRam(catalogCopy);
+                break;
+            case 3:
+                new VolumeVD().sortVolumeVD(catalogCopy);
+                break;
+            case 4:
+                new OperativeSystem().sortOperative(catalogCopy);
+                break;
+            case 5:
+                new Color().sortColor(catalogCopy);
+                break;
         }
     }
 }

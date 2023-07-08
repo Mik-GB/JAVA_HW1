@@ -4,11 +4,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Color extends NoteBook{
-    public void sortColor(List<NoteBook> ctlgCopy) {
-        Collections.sort(ctlgCopy, new Comparator<NoteBook>() {
+public class Color extends Notebook {
+    public void sortColor(List<Notebook> ctlgCopy) {
+        Collections.sort(ctlgCopy, new Comparator<Notebook>() {
             @Override
-            public int compare(NoteBook o1, NoteBook o2) {
+            public int compare(Notebook o1, Notebook o2) {
                 return o1.getColor().compareTo(o2.getColor());
             }
         });
